@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const validator=require('validator');
 const PORT = 4001;
 
-app.set("views", path.join(__dirname, "/views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(partials());
 
@@ -21,7 +21,7 @@ app.set('trust proxy', 1)
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 const csrfMiddleware = csurf({
   cookie: {
